@@ -1,15 +1,110 @@
 .header {
-
     $h: &;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: $corpBlack;
+
+    &__container {
+        height: 10vh;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__logo {
+        height: 100%;
+        z-index: 1000;
+        
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+
+    &__nav {
+        @include trans;
+        position: absolute;
+        top: 0;
+        left: -15px;
+        width: calc(100% + 30px);
+        transform: translate3d(-100%, 0, 0);
+        height: 100vh;
+        background: $corpBlack;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+
+        @include mq(md) {
+            background: transparent;
+            height: auto;
+            width: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+    
+    &__list {
+        @include mq(md) {
+            display: flex;
+        }
+    }
+
+    &__list-item {
+        margin: 20px 0;
+
+        @include mq(md) {
+            margin: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: $montserrat;
+            font-weight: 700;
+            font-size: 16px;
+            
+            @include mq(md) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        z-index: 1000;
+    }
+
+    &__item {
+        margin-left: 20px;
+
+        i {
+            @include trans;
+
+
+            &:hover {
+                color: $white - #333;
+            }
+        }
+    }
 
     &__hamburguer {
         cursor: pointer;
         width: 25px;
-        height: 25px;
-        margin: auto;
-        position: absolute;
-        right: 32px;
-        top: 30px;
+        margin-left: 20px;
+
+        @include mq(md) {
+            display: none;
+        }
 
         span {
             background-color: $mainColor;
@@ -49,7 +144,7 @@
         }
 
         #{$h}__nav {
-
+            transform: translate3d(0, 0, 0);
         }
     }
 }

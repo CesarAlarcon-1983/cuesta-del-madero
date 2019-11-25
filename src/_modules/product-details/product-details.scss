@@ -1,0 +1,102 @@
+@mixin product-details($color: $white, $textColor: $white, $buttonColor: $white, $buttonText: $white) {
+    .product-details {
+        width: 100%;
+
+        @include mq(md) {
+            width: auto;
+            max-width: 430px;
+        }
+
+        &__title {
+            color: $color;
+            text-transform: uppercase;
+            margin: 0;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            font-family: $gotham;
+            position: relative;
+            font-size: 34px;
+            
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 50px;
+                height: 1px;
+                background: $darkBeige;
+            }
+        }
+    
+        &__group {
+            display: flex;
+    
+            &:nth-child(1) {
+                margin-bottom: 10px;
+            }
+    
+            &:nth-child(2) {
+                margin-bottom: 20px;
+            }
+        }
+    
+        &__image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            position: relative;
+            margin-right: 20px;
+            border: 1px solid $color;
+    
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+                height: 60%;
+            }
+    
+        }
+    
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    
+        &__group-title {
+            font-size: 18px;
+            line-height: 26px;
+            color: $color;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+            font-family: $gotham;
+            margin-bottom: 5px;
+        }
+    
+        &__group-text {
+            margin: 0;
+            font-size: 16px;
+            line-height: 23px;
+            font-family: $baskerville;
+            color: $textColor
+        }
+    
+        &__button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: $buttonColor;
+            text-align: center;
+            text-decoration: none;        
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 2px;
+            font-family: $gotham;
+            color: $buttonText;
+        }
+    }
+}

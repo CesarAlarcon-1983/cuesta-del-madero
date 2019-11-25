@@ -1,0 +1,41 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../../';
+
+include ../_modules/product-details/product-details
+
+block content
+  main.roble
+    section.roble__hero
+      h2.roble__hero__title Roble
+      p.roble__hero__text Los vinos de Cuesta del Madero se reconocen por su<br>trayectoria, por su impronta y se caracterizan por una<br>constante evolución y actualización a las últimas<br>tendencias en el mundo del vino.
+
+    section.roble__malbec
+      .container
+        .row.nopadding-xs
+          .col-24.col-md-12
+            .roble__malbec__container
+              +product-details('roble malbec', '16', '18', 'Malbec', '/roble/malbec', '#F7F7F7')
+
+    section.roble__cabernet
+      .container
+        .row.nopadding-xs
+          .col-24.col-md-12.offset-md-12
+            .roble__cabernet__container
+              +product-details('Roble cabernet sauvignon', '16', '18', 'Cabernet Sauvignon', '/roble/cabernet-sauvignon', '#F7F7F7')
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,17 +1,25 @@
 $white: #fff;
 $black: #000;
-$corpBlack: #3e372c;
+$corpBlack: #1a1a1a;
 $darkestGray: #333;
-$darkGray: #787871;
+$darkGray: #4F4F4F;
 $midGray: #999;
 $lightGray: #ebebeb;
-$lightestGray: #f4f7f8;
+$lightestGray: #f7f7f7;
 $blue: #053f7a;
 $blueGray: #bbc9c9;
+$darkestBeige: #472C23;
+$darkBeige: #A58362;
+$midBeige: #EBE8E2;
+$lightBeige: #F3F0EA;
+$lightestBeige: #FAF9F7;
+$green: #00AD73;
+$malbec: #E92D2C;
+$cabernet: #7D1A29;
 
-$mainColor: $blue;
+$mainColor: $lightestGray;
 $link: $mainColor;
-$linkHover: $mainColor + #333;
+$linkHover: $mainColor - #333;
 $text: $white;
 $textDark: $black;
 $accent: $mainColor;
@@ -36,3 +44,6 @@ $easing: cubic-bezier(.785, .135, .15, .86);
 $easingLight: ease;
 
 $mainFont: 'Open Sans', sans-serif;
+$baskerville: 'Libre Baskerville', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$gotham: 'Gotham', sans-serif;

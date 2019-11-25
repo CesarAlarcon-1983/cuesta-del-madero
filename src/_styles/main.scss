@@ -23,6 +23,10 @@ body {
     font-size: $sm;
 }
 
+main {
+  padding-top: 10vh;
+}
+
 a {
     color:$link;
     transition: all $duration $easingLight;
@@ -31,6 +35,10 @@ a {
         color:$linkHover;
         text-decoration: none;
     }
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  color: $mainColor;
 }
 
 ul {

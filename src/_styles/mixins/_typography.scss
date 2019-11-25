@@ -1,3 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
-
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,500,500i,700,700i,900,900i&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/subset-GothamBold.eot');
+	src: url('../fonts/subset-GothamBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/subset-GothamBold.woff2') format('woff2'),
+		url('../fonts/subset-GothamBold.woff') format('woff'),
+		url('../fonts/subset-GothamBold.ttf') format('truetype'),
+		url('../fonts/subset-GothamBold.svg#GothamBold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}

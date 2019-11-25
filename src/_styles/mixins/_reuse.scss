@@ -2,11 +2,38 @@
     transition: $prop $d $e;
 }
 
-@mixin title($size: $lg, $color: $white, $align: 'left') {
+@mixin title($size: $lg, $color: $white, $align: left, $skew: '', $bottomDecoration: '') {
     text-transform: uppercase;
     font-size: $size;
     color: $color;
-    text-align: #{$align};
+    text-align: $align;
+    position: relative;
+    transform: #{$skew};
+    margin-top: 0;
+    width: 100%;
+    
+    @if $bottomDecoration == 'true' {
+        margin-bottom: 51px;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            
+            @if $align == 'left' {
+                left: 0;
+            } 
+            
+            @if $align == 'center' {
+                left: 50%;  
+            }
+            
+            transform: translateX(-50%) matrix(1, 0.09, 0, 1, 0, 0);
+            height: 2px;
+            background: $darkBeige;
+            width: 50px;
+        }
+    }
 }
 
 @mixin padd($mode: both, $size: full) {

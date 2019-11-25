@@ -1,0 +1,36 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+include ../_modules/product-details/product-details
+
+block content
+  main.varietales
+    section.varietales__hero
+      h2.varietales__hero__title Nuestros<br>Varietales
+      p.varietales__hero__text La línea varietal de Cuesta del Madero<br>enaltece la tradición del vino clásico argentino
+
+    section.varietales__malbec
+      .container
+        .row.nopadding-xs
+          .col-24.col-md-12.offset-md-12
+            .varietales__malbec__container
+              +product-details('malbec', '16', '18', 'Malbec', '/varietales/malbec', '#E92D2C')
+
+    section.varietales__cabernet
+      .container
+        .row.nopadding-xs
+          .col-24.col-md-12
+            .varietales__cabernet__container
+              +product-details('cabernet sauvignon', '16', '18', 'Cabernet Sauvignon', '/varietales/cabernet-sauvignon', '#7D1A29')
+
+   section.varietales__blanc
+      .container
+        .row.nopadding-xs
+          .col-24.col-md-12.offset-md-12
+            .varietales__blanc__container
+              +product-details('Sauvignon Blanc', '16', '18', 'Sauvignon Blanc', '/varietales/sauvignon-blanc', '#00AD73')
+
+

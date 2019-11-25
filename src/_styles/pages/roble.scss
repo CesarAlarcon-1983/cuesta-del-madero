@@ -1,0 +1,126 @@
+.roble {
+    &__hero {
+        background: $midBeige;
+        padding-top: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 100px;
+        position: relative;
+        
+        @include mq(md) {
+            padding-top: 100px;
+            padding-bottom: 150px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            height: 80px;
+            width: 2px;
+            background: $darkBeige;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+            
+            @include mq(md) {
+                bottom: 50px;
+            }
+        }
+
+        &__title {
+            @include title($size: 42px, $color: $darkestBeige, $align: center, $skew: 'matrix(1, -0.09, 0, 1, 0, 0)', $bottomDecoration: 'true');
+
+            font-family: $gotham;
+            
+            @include mq(md) {
+                @include title($size: 62px, $color: $darkestBeige, $align: center, $skew: 'matrix(1, -0.09, 0, 1, 0, 0)', $bottomDecoration: 'true');
+
+                line-height: 59px;
+            }
+        }
+
+        &__text {
+            color: $darkGray;
+            text-align: center;
+            line-height: 30px;
+            font-family: $baskerville;
+            font-size: 16px;
+            margin: 0;
+            margin-bottom: 20px;
+
+            
+            @include mq(md) {
+                font-size: 20px;
+            }
+
+            br {
+                display: none;
+
+                @include mq(md) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__malbec {
+        @include product-details($color: $lightestGray, $textColor: $midGray, $buttonColor: $darkBeige, $buttonText: $lightestGray);
+
+        background: url('/images/roble/malbec-bg.png') no-repeat right top / 170%, #35221C;
+        
+        @include mq(md) {
+            height: 75vh;
+            background: url('/images/roble/malbec-bg.png') no-repeat right center / cover;
+        }
+
+        &__container {
+            width: 100%;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            margin: 230px 0 50px 0;
+            padding: 15px 15px 0 15px;
+            box-shadow: 0 -10px 10px rgba(0,0,0,.3);
+
+            @include mq(md) {
+                margin: 0;
+                height: 75vh;
+                padding: 0;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__cabernet {
+        @include product-details($color: $lightestGray, $textColor: $midGray, $buttonColor: $darkBeige, $buttonText: $lightestGray);
+
+        background: url('/images/roble/cabernet-bg.png') no-repeat left top / 170%, #2B1C17;
+
+        @include mq(md) {
+            background: url('/images/roble/cabernet-bg.png') no-repeat left center / cover;
+            height: 75vh;
+        }
+
+        &__container {
+            width: 100%;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            margin: 230px 0 50px 0;
+            padding: 15px 15px 0 15px;
+            box-shadow: 0 -10px 10px rgba(0,0,0,.3);
+
+            @include mq(md) {
+                margin: 0;
+                height: 75vh;
+                padding: 0;
+                box-shadow: none;
+                justify-content: center;
+            }
+        }
+
+        .product-details {
+            max-width: 350px;
+        }
+    }
+}

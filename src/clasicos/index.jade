@@ -1,0 +1,41 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../';
+
+include ../_modules/product-details/product-details
+
+block content
+  main.clasicos
+    section.clasicos__hero
+      h2.clasicos__hero__title Clásicos
+      p.clasicos__hero__text Los vinos Cuesta del Madero Tinto y Blanco nacieron<br>hace más de tres décadas. Han estado presentes en la mesa<br>de tres generaciones y acompañado el crecimiento y<br>desarrollo de la cultura vitivinícola de Argentina
+
+    section.clasicos__tinto
+      .container
+        .row.nopadding-xs
+          .col-24.col-md-12
+            .clasicos__tinto__container
+              +product-details('clásico tinto', '16', '18', 'Malbec', '/roble/malbec', '#F7F7F7')
+
+    section.clasicos__blanco
+      .container
+        .row.nopadding-xs
+          .col-24.col-md-12.offset-md-12
+            .clasicos__blanco__container
+              +product-details('clásico blanco', '16', '18', 'Cabernet Sauvignon', '/roble/cabernet-sauvignon', '#F7F7F7')
+
+
+
+
+
+
+
+
+
+
+
+
+
+

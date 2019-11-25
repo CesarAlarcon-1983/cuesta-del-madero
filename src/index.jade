@@ -1,4 +1,84 @@
 extends _layouts/base
 
+include ./_modules/slider/slider
+include ./_modules/product-details/product-details
+
 block content
     main.home
+        section.home__hero
+            a.home__hero__scroll(href="#nosotros")
+            +slider('home__hero__slider')
+                .home__hero__slide
+                    .home__hero__slide-content
+                        img(src="/images/home/claim.png")
+                .home__hero__slide
+                    .home__hero__slide-content.home__hero__slide-content--center
+                        h2.home__hero__slide-title Varietales
+                        p.home__hero__slide-text La linea varietal de Cuesta del Madero<br>enaltece la tradición del vino clásico argentino.
+
+        section.home__nosotros#nosotros
+            .home__nosotros__container
+                h2.home__nosotros__title nosotros
+                p.home__nosotros__text En nuestro nombre llevamos la identidad de nuestras tierras y viñedos, de donde provienen las uvas que dan origen a nuestro líquido.<br><br>La Cuesta del Madero tiene su historia, ya que era el nombre de uno de los caminos que conducía a los visitantes hacia la antigua casona y a las fincas de las bodegas. Como ven, somos historia y tradición, desde nuestro nombre hasta la mesa.
+
+        section.home__roble
+            .home__roble__container
+                h2.home__roble__title roble
+                p.home__roble__text Cuesta del Madero Roble nace como el resultado de añejar nuestros varietales con un cuidado paso por barricas de roble.
+                a.home__roble__button(href="/roble") descubrir
+
+        section.home__varietales
+            .home__varietales__container
+                h2.home__varietales__title varietales
+                p.home__varietales__text Las primeras cosechas de la línea varietal se lanzaron al mercado en 1983, siendo Cuesta del Madero uno de los pioneros en introducir esta tendencia en Argentina.
+                a.home__varietales__button(href="/varietales") descubrir
+
+        section.home__dulce
+            .home__dulce__container
+                h2.home__dulce__title Cuesta del Madero Dulce
+                p.home__dulce__text Inspirado en tus momentos más dulces. El mejor aliado en la sobremesa y el final de tarde.
+                a.home__dulce__button(href="/dulce") descubrir
+
+        section.home__clasicos
+            .home__clasicos__container
+                h2.home__clasicos__title clásicos
+                p.home__clasicos__text Los vinos Cuesta del Madero Tinto y Blanco nacieron hace más de tres décadas. Han estado presentes en la mesa de tres generaciones y acompañando el crecimiento y desarrollo de la cultura vitivinícola de Argentina.
+                a.home__clasicos__button(href="/clasicos") descubrir
+
+        section.home__social
+            .container
+                .row
+                    .col-24
+                        h2.home__social__title seguinos
+                    .col-24
+                        ul.home__social__list
+                            li.home__social__item
+                                a(href="https://www.facebook.com/BodegaCuestaDelMadero/" target="_blank")
+                                    i.fa.fa-facebook
+                                    p.home__social__address /BodegaCuestaDelMadero
+                            li.home__social__item
+                                a(href="#")
+                                    i.fa.fa-instagram
+                                    p.home__social__address @cuestadelmadero
+
+                            li.home__social__item
+                                a(href="#")
+                                    i.fa.fa-twitter
+                                    p.home__social__address @cuestadelmadero
+
+                    .col-24
+                        .home__social__wrapper
+                            .home__social__col   
+                                a.home__social__image(href="#")
+                                    img(src="/images/home/collage-1.png")
+                            .home__social__col
+                                a.home__social__image.home__social__image--small(href="#")
+                                    img(src="/images/home/collage-2.png")
+                                a.home__social__image.home__social__image--small(href="#")
+                                    img(src="/images/home/collage-3.png")
+                                a.home__social__image.home__social__image--small(href="#")
+                                    img(src="/images/home/collage-4.png")
+                                a.home__social__image.home__social__image--small(href="#")
+                                    img(src="/images/home/collage-5.png")
+
+

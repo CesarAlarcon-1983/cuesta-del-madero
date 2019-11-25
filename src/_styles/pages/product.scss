@@ -1,0 +1,364 @@
+.product {
+    background: $midBeige;
+    overflow: hidden;
+
+    &__details {
+        position: relative;
+        padding-bottom: 300px;
+
+        @include mq(md) {
+
+        }
+        
+        &__image {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            height: 50vh;
+            max-height: 320px;
+            
+            @include mq(md) {
+                top: 390px;
+                bottom: auto;
+                height: auto;
+            }
+            
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+
+    &__title {
+        color: $darkestBeige;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 12px;
+        font-family: $gotham;
+        margin: 40px 0;
+    }
+    
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        height: 90px;
+
+        @include mq(md) {
+            height: 123px;
+        }
+    }
+
+    &__back-arrow {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid $darkBeige;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: calc(50% + 2px);
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0) rotate(45deg);
+            transform-origin: center;
+            width: 7px;
+            height: 7px;
+            border-bottom: 1px solid $darkBeige;
+            border-left: 1px solid $darkBeige;
+        }
+    }
+
+    &__icons {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+
+        @include mq(md) {
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__icon {
+        height: 90px;
+        display: block;
+        margin: 0 10px 0 0;
+        @include mq(md) {
+            margin: 0 20px;
+            height: 123px;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__wrapper {
+        border-bottom: 1px solid transparentize($darkBeige, .7);
+    }
+
+    &__product-title {
+        color: $green;
+        font-family: $gotham;
+        transform: matrix(1, -0.09, 0, 1, 0, 0);
+        text-transform: uppercase;
+        font-size: 42px;
+        text-align: center;
+        
+        @include mq(md) {
+            line-height: 80px;
+            font-size: 92px;
+        }
+    }
+
+    &__grape-icon {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        height: 100%;
+
+        svg {
+            height: 70px;
+
+        }
+    }
+
+    &__grape-text {
+        text-align: right;
+        font-family: $gotham;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: $darkGray;
+        padding: 50px 0;
+        font-family: $baskerville;
+        font-size: 16px;
+        line-height: 28px;
+        margin: 0;
+
+        @include mq(md) {
+            padding: 100px 0;
+        }
+    }
+
+    &__group {
+        padding: 50px 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 1px;
+            background: $darkBeige;
+            opacity: .3;
+            left: 15px;
+            right: 15px;
+
+            @include mq(md) {
+                right: auto;
+                width: 120%;
+            }
+        }
+
+        &--right {
+            &:after {
+                @include mq(md) {
+                    right: 15px;
+                    left: auto;
+                }
+            }
+
+            .product__group__wrapper {
+                flex-direction: row;
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: row-reverse;
+            align-items: center;
+            padding-bottom: 20px;
+            position: relative;
+
+            @include mq(md) {
+                flex-direction: row;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 70px;
+                height: 1px;
+                background: $darkBeige;
+                opacity: .3;
+                left: 0;
+
+                @include mq(md) {
+                    right: 0;
+                    left: auto;
+                }
+            }
+
+            &:nth-child(1) {
+                margin-bottom: 20px;
+            }
+
+            &--right {
+                justify-content: flex-start;
+
+                &:after {
+                    right: auto;
+                    left: 0
+                }
+
+                .product__group__image {
+                    margin-right: 20px;
+                    margin-left: 0;
+                }
+
+                .product__group__container-title,
+                .product__group__container-text {
+                    text-align: left;
+                }
+            }
+        }
+
+        &__container-title {
+            font-family: $gotham;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+            margin-bottom: 5px;
+            text-align: left;
+
+            @include mq(md) {
+                text-align: right;
+            }
+        }
+
+        &__container-text {
+            font-family: $baskerville;
+            font-size: 15px;
+            line-height: 21px;
+            color: $darkGray;
+            margin: 0;
+            text-align: left;
+
+            @include mq(md) {
+                text-align: right;
+            }
+        }
+
+        &__image {
+            height: 30px;
+            margin-right: 20px;
+            
+            @include mq(md) {
+                margin-left: 20px;
+                margin-right: 0;
+            }
+
+            svg {
+                height: 100%;
+                path {
+                    fill: $green;
+                }
+            }
+        }
+    }
+
+    &__next-product {
+        background: $malbec;
+        height: 90vh;
+        
+        &__container {
+            padding: 40px 0;
+            position: relative;
+            text-decoration: none;
+            width: 100%;
+            display: block;
+            height: 90vh;
+            overflow: hidden;
+        }
+
+        &__title {
+            color: $white;
+            margin: 0;
+            text-transform: uppercase;
+            font-family: $gotham;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+
+        &__product-title {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            font-family: $gotham;
+            font-size: 70px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #CE2424;
+            margin: 0;
+
+            @include mq(md) {
+                font-size: 120px;
+            }
+        }
+
+        &__image {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            height: 80%;
+
+            img {
+                height: 100%;
+
+            }
+        }
+    }
+
+    &--varietal-blanc {
+        &__title {
+            color: $darkestBeige;
+        }
+
+        &__grape-icon {
+            path {
+                fill: $green;
+            }
+            
+            p {
+                color: $green;
+            }
+        }
+        &__group {
+            &__container-title {
+                color: $green;
+            }
+        }
+    }
+}
