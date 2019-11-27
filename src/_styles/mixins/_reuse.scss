@@ -2,7 +2,7 @@
     transition: $prop $d $e;
 }
 
-@mixin title($size: $lg, $color: $white, $align: left, $skew: '', $bottomDecoration: '') {
+@mixin title($size: $lg, $color: $white, $align: left, $skew: '', $bottomDecoration: 'normal') {
     text-transform: uppercase;
     font-size: $size;
     color: $color;
@@ -12,7 +12,7 @@
     margin-top: 0;
     width: 100%;
     
-    @if $bottomDecoration == 'true' {
+    @if $bottomDecoration == 'true'{
         margin-bottom: 51px;
         
         &:after {

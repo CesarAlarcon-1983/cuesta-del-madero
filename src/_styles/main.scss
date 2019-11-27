@@ -30,11 +30,16 @@ main {
 a {
     color:$link;
     transition: all $duration $easingLight;
+    cursor: pointer;
 
     &:hover{
         color:$linkHover;
         text-decoration: none;
     }
+}
+
+button {
+  cursor: pointer;
 }
 
 h1,h2,h3,h4,h5,h6,p {

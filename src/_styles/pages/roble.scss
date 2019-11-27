@@ -70,6 +70,7 @@
         
         @include mq(md) {
             height: 75vh;
+            max-height: 530px;
             background: url('/images/roble/malbec-bg.png') no-repeat right center / cover;
         }
 
@@ -85,6 +86,7 @@
             @include mq(md) {
                 margin: 0;
                 height: 75vh;
+                max-height: 530px;
                 padding: 0;
                 box-shadow: none;
             }
@@ -99,6 +101,7 @@
         @include mq(md) {
             background: url('/images/roble/cabernet-bg.png') no-repeat left center / cover;
             height: 75vh;
+            max-height: 530px;
         }
 
         &__container {
@@ -113,9 +116,11 @@
             @include mq(md) {
                 margin: 0;
                 height: 75vh;
+                max-height: 530px;
                 padding: 0;
                 box-shadow: none;
                 justify-content: center;
+                padding-left: 60px;
             }
         }
 

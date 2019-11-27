@@ -116,6 +116,7 @@
         text-align: center;
         
         @include mq(md) {
+            min-height: 200px;
             line-height: 80px;
             font-size: 92px;
         }
@@ -123,10 +124,11 @@
 
     &__grape-icon {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-end;
         flex-direction: column;
         height: 100%;
+        padding: 50px 0;
 
         svg {
             height: 70px;
@@ -150,10 +152,6 @@
         font-size: 16px;
         line-height: 28px;
         margin: 0;
-
-        @include mq(md) {
-            padding: 100px 0;
-        }
     }
 
     &__group {
@@ -321,6 +319,7 @@
             text-transform: uppercase;
             color: #CE2424;
             margin: 0;
+            text-align: center;
 
             @include mq(md) {
                 font-size: 120px;
@@ -358,6 +357,258 @@
         &__group {
             &__container-title {
                 color: $green;
+            }
+        }
+    }
+
+    &--varietal-cabernet {
+        &__title {
+            color: $darkestBeige;
+        }
+
+        &__grape-icon {
+            path {
+                fill: $cabernet;
+            }
+            
+            p {
+                color: $cabernet;
+            }
+        }
+
+        &__product-title {
+            color: $cabernet;
+        }
+
+        &__group {
+            &__container-title {
+                color: $cabernet;
+            }
+
+            &__image {
+                svg {
+                    path {
+                        fill: $cabernet;
+                    }
+                }
+            }
+        }
+
+        &__next-product {
+            background: $green;
+
+            &__product-title {
+                color: #009D68
+            }
+        }
+    }
+
+    &--varietal-malbec {
+        &__title {
+            color: $darkestBeige;
+        }
+
+        &__grape-icon {
+            path {
+                fill: $malbec;
+            }
+            
+            p {
+                color: $malbec;
+            }
+        }
+
+        &__product-title {
+            color: $malbec;
+        }
+
+        &__group {
+            &__container-title {
+                color: $malbec;
+            }
+
+            &__image {
+                svg {
+                    path {
+                        fill: $malbec;
+                    }
+                }
+            }
+        }
+
+        &__next-product {
+            background: $cabernet;
+
+            &__product-title {
+                color: #671522
+            }
+        }
+    }
+
+    &--roble-malbec,
+    &--roble-cabernet {
+        &__title {
+            color: $darkestBeige;
+        }
+
+        &__grape-icon {
+            path {
+                fill: $darkBeige;
+            }
+            
+            p {
+                color: $darkBeige;
+            }
+        }
+
+        &__product-title {
+            color: $darkBeige;
+        }
+
+        &__group {
+            &__container-title {
+                color: $darkBeige;
+            }
+
+            &__image {
+                svg {
+                    path {
+                        fill: $darkBeige;
+                    }
+                }
+            }
+        }
+
+        &__next-product {
+            background: $darkBeige;
+
+            &__product-title {
+                color: #8A6E52
+            }
+        }
+    }
+
+    &--clasico-tinto,
+    &--clasico-blanco {
+        &__title {
+            color: $darkestBeige;
+        }
+
+        &__grape-icon {
+            path {
+                fill: $darkestBeige;
+            }
+            
+            p {
+                color: $darkestBeige;
+            }
+        }
+
+        &__product-title {
+            color: $darkestBeige;
+        }
+
+        &__group {
+            &__container-title {
+                color: $darkestBeige;
+            }
+
+            &__image {
+                svg {
+                    path {
+                        fill: $darkestBeige;
+                    }
+                }
+            }
+        }
+
+        &__next-product {
+            background: $darkestBeige;
+
+            &__product-title {
+                color: #3A241D;
+            }
+        }
+    }
+
+    &--dulce {
+        &__details {
+            @include mq(md) {
+                padding-bottom: 350px;
+            }
+
+            &__image {
+                @include mq(md) {
+                    top: 250px
+                }
+            }
+        }
+        &__wrapper {
+            display: flex;
+            text-align: center;
+            position: relative;
+            margin-top: 70px;
+
+            @include mq(md) {
+                margin-top: 50px;
+            }
+        }
+
+        &__back-arrow {
+            position: absolute;
+            left: 0;
+            top: -55px;
+
+            @include mq(md) {
+                top: 50px;
+            }
+        }
+
+        &__grape-icon {
+            path {
+                fill: $dulce;
+            }
+            
+            p {
+                color: $dulce;
+            }
+        }
+
+        &__product-title {
+            color: $dulce;
+            margin-top: 0;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include mq(md) {
+                font-size: 120px;
+            }
+
+            span {
+                font-size: 36px;
+                // line-height: 42px;
+            }
+        }
+
+        &__group {
+            &__container-title {
+                color: $dulce;
+            }
+
+            &__image {
+                svg {
+                    path {
+                        fill: $dulce;
+                    }
+                }
+            }
+        }
+
+        &__next-product {
+            background: $darkestBeige;
+
+            &__product-title {
+                color: #3A241D;
             }
         }
     }

@@ -1,0 +1,163 @@
+.contacto {
+    background: $midBeige;
+    padding-bottom: 100px;
+
+    &__subtitle {
+        color: $black;
+        font-family: $gotham;
+        font-size: 12px;
+        line-height: 11px;
+        text-align: center;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 50px 0;
+    }
+
+    &__title {
+        @include title($size: 32px, $color: $darkestBeige, $align: center, $bottomDecoration: 'true', $skew: 'matrix(1, -0.09, 0, 1, 0, 0)');
+
+        font-family: $gotham;
+        line-height: 59px;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+
+        @include mq(md) {
+            @include title($size: 62px, $color: $darkestBeige, $align: center, $bottomDecoration: 'true', $skew: 'matrix(1, -0.09, 0, 1, 0, 0)');
+        }
+    }
+
+    &__text {
+        font-family: $baskerville;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        color: $midGray;
+        padding-bottom: 140px;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 80px;
+            width: 2px;
+            background: $darkBeige;
+        }
+    }
+
+    &__form {
+        &__group {
+            height: 50px;
+            position: relative;
+            margin-bottom: 30px;
+
+            &--textarea {
+                height: 150px;
+                margin-bottom: 10px;
+            }
+
+            &--checkbox {
+                display: flex;
+                align-items: center;
+                padding: 10px 0;
+                height: auto;
+                position: relative;
+
+                .contacto__form__input {
+                    position: absolute;
+                    left: -9999px;
+
+                    &:checked + label {
+                        &:before {
+                            content: '✔';
+                            position: absolute;
+                            top: 50%;
+                            left: 2px;
+                            transform: translateY(-50%);
+                            font-size: 8px;
+                        }
+                    }
+                }
+
+                .contacto__form__label {
+                    opacity: 1;
+                    position: static;
+                    padding-left: 20px;
+                    height: 100%;
+                    cursor: pointer;
+                  
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        height: 10px;
+                        width: 10px;
+                        border:1px solid $midGray;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+
+        &__input {
+            height: 100%;
+            width: 100%;
+            border: none;
+            background: $lightestBeige;
+            font-family: $baskerville;
+            color: $midGray;
+            font-size: 14px;
+            padding: 20px;
+            outline: none;
+
+            &::placeholder {
+                @include trans;
+            }
+
+            &:focus {
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+
+            &:focus + label {
+                opacity: 1;
+                top: 2px;
+            }
+        }
+
+        &__label {
+            @include trans;
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            font-size: 12px;
+            font-family: $baskerville;
+            color: $midGray;
+            opacity: 0;
+        }
+
+        &__button {
+            display: block;
+            font-family: $gotham;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: $darkBeige;
+            width: 100%;
+            border: none;
+            line-height: 50px;
+            color: $lightGray;
+
+            @include mq(md) {
+                width: 15%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}

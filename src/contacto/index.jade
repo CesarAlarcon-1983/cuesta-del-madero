@@ -2,7 +2,34 @@ extends ../_layouts/base
 
 block config
   //- Correct base url pathing for this page
-  - var baseUrl = '../'
+  - var baseUrl = '../';
 
 block content
-  p contacto page
+  main.contacto
+    .container
+      .row
+        .col-24
+          h4.contacto__subtitle contacto
+          h2.contacto__title ¿quiéres comunicarte<br>con nosotros?
+          p.contacto__text Envianos un mensaje
+        form.col-24.col-md-18.offset-md-3.contacto__form
+          .row
+            .col-24.col-md-12
+              .contacto__form__group
+                input.contacto__form__input(placeholder="Nombre" id="nombre" name="nombre")
+                label.contacto__form__label(for="nombre") Nombre
+            .col-24.col-md-12
+              .contacto__form__group
+                input.contacto__form__input(placeholder="Mail" id="mail" name="mail")
+                label.contacto__form__label(for="mail") Mail
+            .col-24
+              .contacto__form__group.contacto__form__group--textarea
+                textarea.contacto__form__input(placeholder="Escribenos tu mensaje")
+            .col-24
+              .contacto__form__group.contacto__form__group--checkbox
+                input.contacto__form__input(type="checkbox" id="checkbox", name="checkbox")
+                label.contacto__form__label(for="checkbox") He leído y acepto el aviso de Protección de Datos Personales
+            .col-24
+              button.contacto__form__button(type="submit") enviar
+                
+

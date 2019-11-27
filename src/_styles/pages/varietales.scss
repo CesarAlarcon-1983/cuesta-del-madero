@@ -1,10 +1,16 @@
 .varietales {
     &__hero {
-        height: 75vh;
-        max-height: 600px;
         background: $midBeige;
-        padding-top: 100px;
+        padding-top: 50px;
+        padding-bottom: 100px;
         position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        
+        @include mq(md) {
+            padding-top: 100px;
+            padding-bottom: 150px;
+        }
 
         &:after {
             content: '';
@@ -53,6 +59,7 @@
         
         @include mq(md) {
             height: 75vh;
+            max-height: 530px;
             background: url('/images/varietales/malbec-bg.png') no-repeat left center / cover;
         }
 
@@ -67,6 +74,7 @@
 
             @include mq(md) {
                 height: 75vh;
+                max-height: 530px;
                 margin: 0;            
                 padding: 0;
                 box-shadow: none;
@@ -82,6 +90,7 @@
         
         @include mq(md) {
             height: 75vh;
+            max-height: 530px;
             background: url('/images/varietales/cabernet-bg.png') no-repeat right center / cover;
         }
 
@@ -96,6 +105,7 @@
 
             @include mq(md) {
                 height: 75vh;
+                max-height: 530px;
                 margin: 0;            
                 padding: 0;
                 box-shadow: none;
@@ -110,6 +120,7 @@
         
         @include mq(md) {
             height: 75vh;
+            max-height: 530px;
             background: url('/images/varietales/blanc-bg.png') no-repeat left center / cover;
         }
 
@@ -125,6 +136,7 @@
             @include mq(md) {
                 justify-content: center;
                 height: 75vh;
+                max-height: 530px;
                 margin: 0;            
                 padding: 0;
                 box-shadow: none;

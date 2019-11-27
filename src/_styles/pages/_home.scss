@@ -146,12 +146,20 @@
         }
 
         &__title {
-            @include title($color: $darkestBeige, $size: 30px, $align: center);
+            @include title($color: $darkestBeige, $size: 30px, $align: center, $bottomDecoration: 'true');
             font-family: $gotham;
             letter-spacing: 3px;
 
+            &:after {
+                transform: translateX(-50%) matrix(1, 0, 0, 1, 0, 0);
+            }
+
             @include mq(md) {
-                @include title($color: $darkestBeige, $size: 42px, $align: center);
+                @include title($color: $darkestBeige, $size: 42px, $align: center, $bottomDecoration: 'true');
+
+                &:after {
+                    transform: translateX(-50%) matrix(1, 0, 0, 1, 0, 0);
+                }
             }
         }
 
@@ -177,6 +185,7 @@
     
         @include mq(md) {
             height: 75vh;
+            max-height: 530px;
             padding: 0;
             position: relative;
             background: url('/images/home/roble-bg.png') no-repeat left bottom / cover;
@@ -208,13 +217,21 @@
         }
 
         &__title {
-            @include title($color: $midBeige, $size: 30px, $align: right);
+            @include title($color: $midBeige, $size: 30px, $align: right, $bottomDecoration: 'true');
 
             font-family: $gotham;
             letter-spacing: 3px;
 
+            &:after {
+                transform: translateX(-50%) matrix(1, 0, 0, 1, 0, 0);
+            }
+
             @include mq(md) {
-                @include title($color: $midBeige, $size: 42px, $align: center);
+                @include title($color: $midBeige, $size: 42px, $align: center, $bottomDecoration: 'true');
+
+                &:after {
+                    transform: translateX(-50%) matrix(1, 0, 0, 1, 0, 0);
+                }
             }
         }
 
@@ -253,7 +270,7 @@
     }
 
     &__varietales {
-        background: url('/images/home/varietales-bg.png') no-repeat center bottom / cover;
+        background: url('/images/home/varietales-bg.png') no-repeat -200px bottom / cover;
 
         @include mq(md) {
             background: url('/images/home/varietales-bg.png') no-repeat right bottom / cover;
@@ -271,10 +288,18 @@
         }
 
         &__title {
-            @include title($color: $darkestBeige, $size: 30px, $align: left);
+            @include title($color: $darkestBeige, $size: 30px, $align: left, $bottomDecoration: 'true');
+
+            &:after {
+                transform: translateX(-50%) matrix(1, 0, 0, 1, 0, 0);
+            }
 
             @include mq(md) {
-                @include title($color: $darkestBeige, $size: 42px, $align: center);
+                @include title($color: $darkestBeige, $size: 42px, $align: center, $bottomDecoration: 'true');
+
+                &:after {
+                    transform: translateX(-50%) matrix(1, 0, 0, 1, 0, 0);
+                }
             }
         }
 
@@ -303,10 +328,18 @@
         }
 
         &__title {
-            @include title($color: $darkestBeige, $size: 30px, $align: 'center');
+            @include title($color: $darkestBeige, $size: 30px, $align: 'center', $bottomDecoration: 'true');
+
+            &:after {
+                transform: translateX(-50%) matrix(1, 0, 0, 1, 0, 0);
+            }
 
             @include mq(md) {
-                @include title($color: $darkestBeige, $size: 42px, $align: 'center');
+                @include title($color: $darkestBeige, $size: 42px, $align: 'center', $bottomDecoration: 'true');
+
+                &:after {
+                    transform: translateX(-50%) matrix(1, 0, 0, 1, 0, 0);
+                }
             }
         }
 
@@ -317,7 +350,11 @@
     }
 
     &__clasicos {
-        background: url('/images/home/clasicos-bg.png') no-repeat center bottom / cover;
+        background: url('/images/home/clasicos-bg.png') no-repeat -245px bottom / cover;
+
+        @include mq(md) {
+            background: url('/images/home/clasicos-bg.png') no-repeat center bottom / cover;
+        }
 
         &__container {
             margin-right: auto;
@@ -345,7 +382,7 @@
         padding: 40px 0 80px 0;
 
         &__title {
-            @include title($size: 52px, $color: $darkestBeige, $align: center, $skew: 'matrix(1, -0.09, 0, 1, 0, 0)');
+            @include title($size: 52px, $color: $darkestBeige, $align: center, $skew: 'matrix(1, -0.09, 0, 1, 0, 0)', $bottomDecoration: 'true');
             font-family: $gotham;
             position: relative;
             padding-top: 150px;
