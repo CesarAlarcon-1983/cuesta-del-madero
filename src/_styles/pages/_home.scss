@@ -322,8 +322,8 @@
 
         &__container {
             @include mq(md) {
-                width: 30%;
-                left: 55%;
+                width: 40%;
+                left: 50%;
             }
         }
 
@@ -345,7 +345,7 @@
 
         &__text {
             color: $darkGray;
-            width: 90%;
+            width: 70%;
         }
     }
 
