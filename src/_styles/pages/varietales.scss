@@ -40,7 +40,7 @@
         }
 
         &__text {
-            color: $darkGray;
+            color: $midGray;
             text-align: center;
             line-height: 30px;
             font-family: $baskerville;
@@ -53,7 +53,7 @@
     }
 
     &__malbec {
-        @include product-details($color: $malbec, $textColor: $midGray, $buttonColor: $malbec, $buttonText: $lightGray);
+        @include product-details($color: $malbec, $textColor: $darkGray, $buttonColor: $malbec, $buttonText: $lightGray);
 
         background: url('/images/varietales/malbec-bg.png') no-repeat 65px top / 150%, #F3F0EB;
         
@@ -84,7 +84,7 @@
     }
 
     &__cabernet {
-        @include product-details($color: $cabernet, $textColor: $midGray, $buttonColor: $cabernet, $buttonText: $lightGray);
+        @include product-details($color: $cabernet, $textColor: $darkGray, $buttonColor: $cabernet, $buttonText: $lightGray);
         
         background: url('/images/varietales/cabernet-bg.png') no-repeat -200px top / 150%, #E8E9E3;
         
@@ -114,7 +114,7 @@
     }
 
     &__blanc {
-        @include product-details($color: $green, $textColor: $midGray, $buttonColor: $green, $buttonText: $lightGray);
+        @include product-details($color: $green, $textColor: $darkGray, $buttonColor: $green, $buttonText: $lightGray);
         
         background: url('/images/varietales/blanc-bg.png') no-repeat left top / 150%, #F3F0EB;
         

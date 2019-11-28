@@ -40,7 +40,7 @@
         }
 
         &__text {
-            color: $darkGray;
+            color: $midGray;
             text-align: center;
             line-height: 30px;
             font-family: $baskerville;
@@ -63,7 +63,7 @@
     }
 
     &__tinto {
-        @include product-details($color: $lightestGray, $textColor: $midGray, $buttonColor: $darkBeige, $buttonText: $lightestGray);
+        @include product-details($color: $lightestGray, $textColor: $lightestGray, $buttonColor: $darkBeige, $buttonText: $lightestGray);
 
         background: url('/images/clasicos/tinto-bg.png') no-repeat right top / 170%, $corpBlack;
         
@@ -93,7 +93,7 @@
     }
 
     &__blanco {
-        @include product-details($color: $lightestGray, $textColor: $midGray, $buttonColor: $darkBeige, $buttonText: $lightestGray);
+        @include product-details($color: $lightestGray, $textColor: $lightestGray, $buttonColor: $darkBeige, $buttonText: $lightestGray);
 
         background: url('/images/clasicos/blanco-bg.png') no-repeat left top / 170%, $corpBlack;
         

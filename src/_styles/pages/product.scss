@@ -23,6 +23,7 @@
                 top: 390px;
                 bottom: auto;
                 height: auto;
+                max-height: 700px;
             }
             
             img {
@@ -146,7 +147,7 @@
     }
 
     &__text {
-        color: $darkGray;
+        color: $midGray;
         padding: 50px 0;
         font-family: $baskerville;
         font-size: 16px;
@@ -257,7 +258,7 @@
             font-family: $baskerville;
             font-size: 15px;
             line-height: 21px;
-            color: $darkGray;
+            color: $midGray;
             margin: 0;
             text-align: left;
 
@@ -314,7 +315,7 @@
             left: 50%;
             transform: translate3d(-50%, -50%, 0);
             font-family: $gotham;
-            font-size: 70px;
+            font-size: 50px;
             letter-spacing: 3px;
             text-transform: uppercase;
             color: #CE2424;
@@ -341,6 +342,12 @@
     }
 
     &--varietal-blanc {
+        &__details {
+            @include mq(md) {
+                padding-bottom: 350px;
+            }
+        }
+
         &__title {
             color: $darkestBeige;
         }
@@ -534,7 +541,7 @@
     &--dulce {
         &__details {
             @include mq(md) {
-                padding-bottom: 350px;
+                padding-bottom: 450px;
             }
 
             &__image {

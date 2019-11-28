@@ -40,7 +40,7 @@
         }
 
         &__text {
-            color: $darkGray;
+            color: $midGray;
             text-align: center;
             line-height: 30px;
             font-family: $baskerville;
@@ -64,7 +64,7 @@
     }
 
     &__malbec {
-        @include product-details($color: $lightestGray, $textColor: $midGray, $buttonColor: $darkBeige, $buttonText: $lightestGray);
+        @include product-details($color: $lightestGray, $textColor: $lightestGray, $buttonColor: $darkBeige, $buttonText: $lightestGray);
 
         background: url('/images/roble/malbec-bg.png') no-repeat right top / 170%, #35221C;
         
@@ -94,7 +94,7 @@
     }
 
     &__cabernet {
-        @include product-details($color: $lightestGray, $textColor: $midGray, $buttonColor: $darkBeige, $buttonText: $lightestGray);
+        @include product-details($color: $lightestGray, $textColor: $lightestGray, $buttonColor: $darkBeige, $buttonText: $lightestGray);
 
         background: url('/images/roble/cabernet-bg.png') no-repeat left top / 170%, #2B1C17;
 
