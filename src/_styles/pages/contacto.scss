@@ -67,7 +67,8 @@
 
                 .contacto__form__input {
                     position: absolute;
-                    left: -9999px;
+                    left: 0;
+                    opacity: 0;
 
                     &:checked + label {
                         &:before {

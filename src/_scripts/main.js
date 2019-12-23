@@ -8,9 +8,11 @@ global.$ = global.jQuery;
 
 var Header = require('../_modules/header/header');
 var Slider = require('../_modules/slider/slider');
+var SendMail = require('./sendMail');
 
 $(function() {
 
     new Header();
     new Slider();
+    new SendMail();
 });

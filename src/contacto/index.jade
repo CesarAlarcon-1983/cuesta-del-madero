@@ -16,18 +16,18 @@ block content
           .row
             .col-24.col-md-12
               .contacto__form__group
-                input.contacto__form__input(placeholder="Nombre" id="nombre" name="nombre")
+                input.contacto__form__input(placeholder="Nombre" id="nombre" name="nombre" required)
                 label.contacto__form__label(for="nombre") Nombre
             .col-24.col-md-12
               .contacto__form__group
-                input.contacto__form__input(placeholder="Mail" id="mail" name="mail")
+                input.contacto__form__input(placeholder="Mail" id="mail" name="mail" required)
                 label.contacto__form__label(for="mail") Mail
             .col-24
               .contacto__form__group.contacto__form__group--textarea
-                textarea.contacto__form__input(placeholder="Escribenos tu mensaje")
+                textarea.contacto__form__input(placeholder="Escribenos tu mensaje" id="mensaje" required)
             .col-24
               .contacto__form__group.contacto__form__group--checkbox
-                input.contacto__form__input(type="checkbox" id="checkbox", name="checkbox")
+                input.contacto__form__input(type="checkbox" id="checkbox", name="checkbox" required)
                 label.contacto__form__label(for="checkbox") He leído y acepto el aviso de Protección de Datos Personales
             .col-24
               button.contacto__form__button(type="submit") enviar
